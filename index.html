@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card</title>
+    
+    <!-- Google Font (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(90deg, rgb(101, 94, 226) 0%, 
+            rgba(112,112,207,1) 46%, rgb(213, 218, 220) 100%);
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Updated font */
+        }
+
+        .card1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .A {
+            color: #0a0a0a;
+            padding: 20px; /* Added more padding */
+            margin: 20px; /* Increased margin */
+            background-color: #fff;
+            width: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 15px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+            transition: transform 0.3s ease;
+        }
+
+        .A:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        .A img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .A img:hover {
+            transition: transform 0.2s ease;
+            transform: scale(1.05); /* Zoom effect on image hover */
+        }
+
+        .B, .C {
+            background: #edecec;
+            height: 40px;
+            width: 160px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px; /* Add margin for spacing */
+            font-weight: bold; /* Bold text for buttons */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+        }
+
+        .B:hover, .C:hover {
+            cursor: pointer;
+            background-color: #000; /* Darker color on hover */
+            color: #fff;
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        .D {
+            font-size: 18px; /* Increased font size for better readability */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .A {
+                width: 90%; /* Adjust width for smaller screens */
+            }
+
+            .A img {
+                height: 200px; /* Reduce image height for mobile */
+            }
+
+            .B, .C {
+                width: 140px; /* Reduce button width for mobile */
+            }
+
+            .D {
+                font-size: 16px; /* Adjust font size for mobile */
+            }
+        }
+
+    </style>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card1">
+        <div class="A">
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b2f962c4-31bd-4c25-a5d1-b579e1ec0787/NIKE+FULL+FORCE+LO+COB.png">
+            <p class="D">Nike shoes combine sleek design, comfort, and style for perfection.</p>
+        </div>
+        <div>
+            <!-- Buy Now button with shopping cart icon -->
+            <button class="B"><i class="fa-solid fa-cart-shopping"></i> Buy Now</button>
+            <button class="C">Save for later</button>
+        </div>
+    </div>
+</body>
+</html>
